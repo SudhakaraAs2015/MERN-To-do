@@ -1,0 +1,15 @@
+# Ignore node_modules folder (dependencies)
+node_modules/
+
+# Ignore environment variables (contains sensitive data)
+.env
+
+# Ignore system-specific files (macOS)
+.DS_Store
+
+# If you're using npm, keep package-lock.json tracked
+# Ignore if you're not using npm or want to keep it out
+# package-lock.json
+
+# Ignore history directory (if it's for logs or temporary files)
+history/
