@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import LoginPage from './components/LoginPage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import TodoApp from './TodoApp';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <LoginPage/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/todos" element={<TodoApp />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
