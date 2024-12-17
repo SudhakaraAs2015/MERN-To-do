@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getTodos, createTodo, updateTodo, deleteTodo } from './api';
-import TodoItem from './components/TodoItem';
+import { getTodo, createTodo, updateTodo, deleteTodo } from './api';
+import TodoItem from './TodoItem';
 
 const TodoApp = () => {
     const [todos, setTodos] = useState([]);
@@ -10,7 +10,7 @@ const TodoApp = () => {
 
     useEffect(() => {
         const fetchTodos = async () => {
-            const { data } = await getTodos();
+            const { data } = await getTodo();
             setTodos(data);
         };
         fetchTodos();
